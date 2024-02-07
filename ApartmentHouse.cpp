@@ -13,18 +13,20 @@ int main()
     string surname[10];
     cout << " Enter surnames: " << endl;
     for (int i = 0; i < 10; i++) {
+        cout << " ";
         cin >> surname[i];
     }
 
     while (true) {
         int number;
         cout << " Enter apartment number: " << endl;
+        cout << " ";
         cin >> number;
         if (number < 1 || number>10) {
-            cout << " Defoult date";
+            cout << " Invalid apartment number entered" << endl;
             break;
         }
-        cout << surname[number - 1];
+        cout << " " << surname[number - 1] << endl;
     }
 
 
