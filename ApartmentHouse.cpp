@@ -10,23 +10,23 @@ int main()
     system("color 80");
 
     cout << endl;
-    string surname[10];
-    cout << " Enter surnames: " << endl;
-    for (int i = 0; i < 10; i++) {
-        cout << " ";
+    string surname[10];                                          // Объявляем стринговый массив
+    cout << " Enter surnames: " << endl;                         // Запрашиваем фамилии жильцов
+    for (int i = 0; i < 10; i++) {                               // В цикле заполняем массив фамилиями жильцов
+        cout << " ";                                             
         cin >> surname[i];
     }
 
-    while (true) {
-        int number;
+    while (true) {                                               // Бесконечный цикл для запроса номера квартиры
+        int number;                                              // и вывода фамилии жильца таковой
         cout << " Enter apartment number: " << endl;
         cout << " ";
         cin >> number;
-        if (number < 1 || number>10) {
-            cout << " Invalid apartment number entered" << endl;
+        if (number < 1 || number>10) {                           // Если введён недопустимый номер квартиры
+            cout << " Invalid apartment number entered" << endl; // выводим сообщение об этом и выходим из программы
             break;
         }
-        cout << " " << surname[number - 1] << endl;
+        cout << ' ' << surname[number - 1] << endl;
     }
 
 
